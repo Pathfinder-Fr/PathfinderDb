@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.Http;
+using Owin;
 
 namespace PathfinderDb
 {
-    public static class WebApiConfig
+    partial class Startup
     {
-        public static void Register(HttpConfiguration config)
+        public HttpConfiguration ConfigureWebApi(IAppBuilder app)
         {
-            // Web API configuration and services
+            var config = new HttpConfiguration();
 
-            // Web API routes
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
@@ -19,6 +20,9 @@ namespace PathfinderDb
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            return config;
+
         }
     }
 }

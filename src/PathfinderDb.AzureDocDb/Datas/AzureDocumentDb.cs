@@ -21,7 +21,7 @@ namespace PathfinderDb.Datas
 
 		public AzureDocumentDb()
 		{
-			this.client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey));
+			this.client = new DocumentClient(new Uri(EndpointUrl), AuthorizationKey);
 		}
 
 		public SourceDocumentCollection Sources

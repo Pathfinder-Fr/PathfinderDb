@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderDb.Core", "src\Pa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderDb.AzureDocDb", "src\PathfinderDb.AzureDocDb\PathfinderDb.AzureDocDb.csproj", "{6A2B773E-77C9-4CCE-9127-BD4C292879F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderDb.Sql", "src\PathfinderDb.Sql\PathfinderDb.Sql.csproj", "{CF21AB5D-40CA-4EB9-8AAD-6ED5CB886FD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6A2B773E-77C9-4CCE-9127-BD4C292879F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A2B773E-77C9-4CCE-9127-BD4C292879F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A2B773E-77C9-4CCE-9127-BD4C292879F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF21AB5D-40CA-4EB9-8AAD-6ED5CB886FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF21AB5D-40CA-4EB9-8AAD-6ED5CB886FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF21AB5D-40CA-4EB9-8AAD-6ED5CB886FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF21AB5D-40CA-4EB9-8AAD-6ED5CB886FD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,7 +14,7 @@ namespace PathfinderDb.Datas
 		internal SourceDocumentCollection(DocumentClient client)
 		{
 			this.client = client;
-			this.client.ReadDocumentCollectionAsync()
+            //this.client.ReadDocumentCollectionAsync();
 		}
 	}
 }
