@@ -3,8 +3,7 @@ using PathfinderDb.Models;
 
 namespace PathfinderDb.Datas
 {
-    public interface IApplicationUserStore : IUserStore<IApplicationUser>
+    public interface IApplicationRoleStore : IRoleStore<ApplicationRole>
     {
-        IApplicationUser New();
     }
 }

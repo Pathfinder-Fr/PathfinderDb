@@ -4,7 +4,7 @@ using PathfinderDb.Models;
 
 namespace PathfinderDb.Services
 {
-    public class ApplicationRoleManager : RoleManager<IApplicationRole>
+    public class ApplicationRoleManager : RoleManager<ApplicationRole>
     {
         public ApplicationRoleManager(IApplicationRoleStore store)
             : base(store)

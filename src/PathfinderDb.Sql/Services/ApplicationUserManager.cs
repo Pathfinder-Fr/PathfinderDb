@@ -7,7 +7,7 @@ using PathfinderDb.Services;
 
 namespace PathfinderDb.Services
 {
-    public class ApplicationUserManager : UserManager<IApplicationUser>
+    public class ApplicationUserManager : UserManager<ApplicationUser>
     {
         private IApplicationUserStore appStore;
 
@@ -60,9 +60,9 @@ namespace PathfinderDb.Services
             }
         }
 
-        public IApplicationUser New(string email)
+        public IApplicationUser New(string email, bool confirmed = false)
         {
-            return this.appStore.New();
+            return this.appStore.New(email, confirmed);
         }
 
         private class ApplicationUserValidator : UserValidator<IApplicationUser>

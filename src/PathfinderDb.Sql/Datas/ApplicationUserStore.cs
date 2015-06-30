@@ -12,34 +12,9 @@ namespace PathfinderDb.Datas
         {
         }
 
-        Task IUserStore<IApplicationUser, string>.CreateAsync(IApplicationUser user)
+        public IApplicationUser New(string email, bool confirmed = false)
         {
-            return this.CreateAsync((ApplicationUser)user);
-        }
-
-        Task IUserStore<IApplicationUser, string>.DeleteAsync(IApplicationUser user)
-        {
-            return this.DeleteAsync((ApplicationUser)user);
-        }
-
-        async Task<IApplicationUser> IUserStore<IApplicationUser, string>.FindByIdAsync(string userId)
-        {
-            return await this.FindByIdAsync(userId);
-        }
-
-        async Task<IApplicationUser> IUserStore<IApplicationUser, string>.FindByNameAsync(string userName)
-        {
-            return await this.FindByNameAsync(userName);
-        }
-
-        Task IUserStore<IApplicationUser, string>.UpdateAsync(IApplicationUser user)
-        {
-            return this.UpdateAsync((ApplicationUser)user);
-        }
-
-        public IApplicationUser New()
-        {
-            return new ApplicationUser();
+            return new ApplicationUser() { UserName = email, Email = email, EmailConfirmed = confirmed};
         }
     }
 }

@@ -5,6 +5,11 @@ namespace PathfinderDb.ViewModels
     public class AccountRegisterViewModel
     {
         [Required]
+        [Display(Name = "Username")]
+        [StringLength(16, MinimumLength = 3)]
+        public string Username { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
