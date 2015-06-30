@@ -92,8 +92,6 @@
     <Compile Include="Datas\ApplicationDbContext.cs" />
     <Compile Include="Datas\ApplicationRoleStore.cs" />
     <Compile Include="Datas\ApplicationUserStore.cs" />
-    <Compile Include="Datas\IApplicationRoleStore.cs" />
-    <Compile Include="Datas\IApplicationUserStore.cs" />
     <Compile Include="Models\ApplicationRole.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,7 +110,6 @@
       <Name>PathfinderDb.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

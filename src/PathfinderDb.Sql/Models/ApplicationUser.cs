@@ -5,9 +5,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace PathfinderDb.Models
 {
-	public class ApplicationUser : IdentityUser, IApplicationUser
+	public class ApplicationUser : IdentityUser
     {
-        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<IApplicationUser> manager)
+        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
             return userIdentity;

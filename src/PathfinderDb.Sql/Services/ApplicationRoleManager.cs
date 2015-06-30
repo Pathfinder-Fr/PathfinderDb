@@ -6,7 +6,7 @@ namespace PathfinderDb.Services
 {
     public class ApplicationRoleManager : RoleManager<ApplicationRole>
     {
-        public ApplicationRoleManager(IApplicationRoleStore store)
+        public ApplicationRoleManager(ApplicationRoleStore store)
             : base(store)
         {
         }

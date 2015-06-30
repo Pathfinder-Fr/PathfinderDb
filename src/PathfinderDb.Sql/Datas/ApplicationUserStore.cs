@@ -5,14 +5,14 @@ using PathfinderDb.Models;
 
 namespace PathfinderDb.Datas
 {
-    public class ApplicationUserStore : UserStore<ApplicationUser>, IApplicationUserStore
+    public class ApplicationUserStore : UserStore<ApplicationUser>
     {
         public ApplicationUserStore(ApplicationDbContext context)
             : base(context)
         {
         }
 
-        public IApplicationUser New(string email, bool confirmed = false)
+        public ApplicationUser New(string email, bool confirmed = false)
         {
             return new ApplicationUser() { UserName = email, Email = email, EmailConfirmed = confirmed};
         }

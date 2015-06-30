@@ -5,7 +5,7 @@ using PathfinderDb.Models;
 
 namespace PathfinderDb.Datas
 {
-    public class ApplicationRoleStore : RoleStore<ApplicationRole>, IApplicationRoleStore
+    public class ApplicationRoleStore : RoleStore<ApplicationRole>
     {
         public ApplicationRoleStore(ApplicationDbContext context)
             : base(context)

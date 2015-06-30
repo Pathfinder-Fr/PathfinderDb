@@ -2,7 +2,7 @@
 
 namespace PathfinderDb.Models
 {
-	public class ApplicationRole : IdentityRole, IApplicationRole
+	public class ApplicationRole : IdentityRole
     {
 	}
 }

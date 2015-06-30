@@ -9,9 +9,9 @@ namespace PathfinderDb.Services
 {
     public class ApplicationUserManager : UserManager<ApplicationUser>
     {
-        private IApplicationUserStore appStore;
+        private ApplicationUserStore appStore;
 
-        public ApplicationUserManager(IApplicationUserStore store, IdentityFactoryOptions<ApplicationUserManager> options)
+        public ApplicationUserManager(ApplicationUserStore store, IdentityFactoryOptions<ApplicationUserManager> options)
         : base(store)
         {
             this.appStore = store;
@@ -46,7 +46,7 @@ namespace PathfinderDb.Services
             //{
             //    MessageFormat = "Your security code is {0}"
             //});
-            this.RegisterTwoFactorProvider("Email Code", new EmailTokenProvider<IApplicationUser>
+            this.RegisterTwoFactorProvider("Email Code", new EmailTokenProvider<ApplicationUser>
             {
                 Subject = "Security Code",
                 BodyFormat = "Your security code is {0}"
@@ -56,16 +56,16 @@ namespace PathfinderDb.Services
             var dataProtectionProvider = options.DataProtectionProvider;
             if (dataProtectionProvider != null)
             {
-                this.UserTokenProvider = new DataProtectorTokenProvider<IApplicationUser>(dataProtectionProvider.Create("ASP.NET Identity"));
+                this.UserTokenProvider = new DataProtectorTokenProvider<ApplicationUser>(dataProtectionProvider.Create("ASP.NET Identity"));
             }
         }
 
-        public IApplicationUser New(string email, bool confirmed = false)
+        public ApplicationUser New(string email, bool confirmed = false)
         {
             return this.appStore.New(email, confirmed);
         }
 
-        private class ApplicationUserValidator : UserValidator<IApplicationUser>
+        private class ApplicationUserValidator : UserValidator<ApplicationUser>
         {
             public ApplicationUserValidator(ApplicationUserManager manager)
                 :base(manager)
